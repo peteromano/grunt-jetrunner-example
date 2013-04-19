@@ -22,17 +22,11 @@ module.exports = function(grunt) {
     jshint: {
       all: [
         'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>',
+        'tasks/*.js'
       ],
       options: {
         jshintrc: '.jshintrc',
       },
-    },
-
-    // Before generating any new files, remove any previously-created files.
-    clean: {
-      tests: ['tmp'],
     },
 
     // Configuration to be run (and then tested).
@@ -57,8 +51,8 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'jetrunner:local']);
-  grunt.registerTask('ci', ['clean', 'jetrunner:remote']);
+  grunt.registerTask('test', ['jetrunner:local']);
+  grunt.registerTask('ci', ['jetrunner:remote']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
