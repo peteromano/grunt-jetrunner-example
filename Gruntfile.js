@@ -52,7 +52,7 @@ module.exports = function(grunt) {
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['jetrunner:local']);
-  grunt.registerTask('ci', ['jetrunner:remote']);
+  grunt.registerTask('staging', ['jetrunner:remote']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
