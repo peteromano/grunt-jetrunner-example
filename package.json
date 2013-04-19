@@ -1,0 +1,21 @@
+{
+  "name": "grunt-jetrunner-example",
+  "version": "1.0.0",
+  "dependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-cli": "~0.1.7",
+    "grunt-jetrunner": "~1.0.0",
+    "jamjs": "~0.2.17"
+  },
+  "jam": {
+    "packageDir": "client/vendor",
+    "dependencies": {
+        "json3": "~3.2.2",
+        "mocha": "~1.9.0",
+        "chai": "~1.5.0",
+        "sinon": "*"
+    }
+  }
+}
