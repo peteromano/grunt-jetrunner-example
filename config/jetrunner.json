@@ -1,49 +1,49 @@
-    {
+{
 
-        "tests": [
-            { "/js/test/adder_test.js":        "/js/src/adder.js" },
-            { "/js/test/divider_test.js":      "/js/src/divider.js" },
-            { "/js/test/multiplier_test.js":   "/js/src/multiplier.js" }
-        ],
+    "tests": [
+        { "/js/test/adder_test.js":        "/js/src/adder.js" },
+        { "/js/test/divider_test.js":      "/js/src/divider.js" },
+        { "/js/test/multiplier_test.js":   "/js/src/multiplier.js" }
+    ],
 
-        "runner": {
-            "base": "client",
-            "template": "client/js/test/default-runner.jade",
-	    "styles": ["/vendor/mocha/mocha.css"],
-            "scripts": [
-                "/vendor/json3/lib/json3.min.js",
-                "/vendor/mocha/mocha.js",
-                "/vendor/sinon/sinon.js"
-            ]
+    "runner": {
+        "base": "client",
+        "template": "client/js/test/default-runner.jade",
+    "styles": ["/vendor/mocha/mocha.css"],
+        "scripts": [
+            "/vendor/json3/lib/json3.min.js",
+            "/vendor/mocha/mocha.js",
+            "/vendor/sinon/sinon.js"
+        ]
+    },
+
+    "saucelabs": {
+        "driver": "saucelabs",
+        "reportFile": "log/tests/report.tap",
+        "key": "1ebab6ce-c188-486f-86dd-3cc1957f2435",
+        "username": "peteromano",
+        "password": "j3trvnz3r",
+        "continueOnFail": true,
+        "maxParallel": 2,
+        "tunnel": {
+            "enabled": true,
+            "path": "opt/Sauce-Connect-latest/Sauce-Connect.jar",
+            "readyFile": "log/jetrunner/sauce_connect.log",
+            "fastFailRegexps": ["favicon.ico"]
         },
-
-        "saucelabs": {
-            "driver": "saucelabs",
-            "reportFile": "log/tests/report.tap",
-            "key": "1ebab6ce-c188-486f-86dd-3cc1957f2435",
-            "username": "peteromano",
-            "password": "j3trvnz3r",
-            "continueOnFail": true,
-            "maxParallel": 2,
-            "tunnel": {
-                "enabled": true,
-                "path": "/usr/local/opt/Sauce-Connect-latest/Sauce-Connect.jar",
-                "readyFile": "log/jetrunner/sauce_connect.log",
-                "fastFailRegexps": ["favicon.ico"]
-            },
-            "browsers": [
-                {"browser": "googlechrome", "os": "OS X 10.8", "browser-version": ""},
-                {"browser": "safari", "os": "OS X 10.8", "browser-version": "6"},
-                {"browser": "firefox", "os": "Windows 8", "browser-version": "20"},
-                {"browser": "googlechrome", "os": "Windows 7", "browser-version": ""},
-                {"browser": "firefox", "os": "Windows 7", "browser-version": "20"},
-                {"browser": "iehta", "os": "Windows 7", "browser-version": "9"},
-                {"browser": "iehta", "os": "Windows 7", "browser-version": "8"},
-                {"browser": "googlechrome", "os": "Windows XP", "browser-version": ""},
-                {"browser": "firefox", "os": "Windows XP", "browser-version": "20"},
-                {"browser": "googlechrome", "os": "Linux", "browser-version": ""},
-                {"browser": "firefox", "os": "Linux", "browser-version": "20"}
-            ]
-        }
-
+        "browsers": [
+            {"browser": "googlechrome", "os": "OS X 10.8", "browser-version": ""},
+            {"browser": "safari", "os": "OS X 10.8", "browser-version": "6"},
+            {"browser": "firefox", "os": "Windows 8", "browser-version": "20"},
+            {"browser": "googlechrome", "os": "Windows 7", "browser-version": ""},
+            {"browser": "firefox", "os": "Windows 7", "browser-version": "20"},
+            {"browser": "iehta", "os": "Windows 7", "browser-version": "9"},
+            {"browser": "iehta", "os": "Windows 7", "browser-version": "8"},
+            {"browser": "googlechrome", "os": "Windows XP", "browser-version": ""},
+            {"browser": "firefox", "os": "Windows XP", "browser-version": "20"},
+            {"browser": "googlechrome", "os": "Linux", "browser-version": ""},
+            {"browser": "firefox", "os": "Linux", "browser-version": "20"}
+        ]
     }
+
+}
